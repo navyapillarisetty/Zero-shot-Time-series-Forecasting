@@ -22,4 +22,4 @@ plications, environmental monitoring, and traffic monitoring. As such, synthesiz
  of generated time series for both unseen time range and unseen time series. This
  allows to train a generator/predictor only once with a generic time series and use
  the same generator/predictor for all other datasets, when their statistical summaries
- are available. 
+ are available.@ 
