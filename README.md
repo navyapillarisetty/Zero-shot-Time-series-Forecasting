@@ -1,8 +1,8 @@
 # Zero-shot-Time-series-Forecasting
-Zero-Shot Time-Series Forecasting by Statistically Assisted Models 
+**Zero-Shot Time-Series Forecasting by Statistically Assisted Models** 
 
 
-Abstract
+*Abstract*
 
  Time-series data stem from many sources such as financial applications, medical ap
 plications, environmental monitoring, and traffic monitoring. As such, synthesizing
