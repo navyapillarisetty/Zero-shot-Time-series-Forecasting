@@ -27,4 +27,4 @@ plications, environmental monitoring, and traffic monitoring. As such, synthesiz
 
  ![Neurips methodology updated jpeg](https://github.com/user-attachments/assets/eec2acb4-80c7-49f4-80c1-1a0305c80a60)
                      
-                     Figure 1: *Our proposed methodology that enables Zero-shot forecasting*
+                     Figure 1: Our proposed methodology that enables Zero-shot forecasting
