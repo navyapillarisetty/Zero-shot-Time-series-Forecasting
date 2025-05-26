@@ -18,6 +18,6 @@ def random_data(data,seq_length):
         stat_info.append(np.random.normal(mean[i],std[i], seq_length))
     stat_info= np.array(stat_info)
     stat_info1= stat_info.reshape(len(stat_info)*seq_length)
-    np.savetxt(r"..\L1MAG_summary_statistics.csv",stat_info1)
+    np.savetxt(r"..\L1MAG_part2_summary_statistics.csv",stat_info1)
     return stat_info1
 
