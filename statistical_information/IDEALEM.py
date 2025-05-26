@@ -54,30 +54,6 @@ def encoder(seq_length,numberOfbuffers):
         return p
 
     def KolmogorovTest(na, a, nb, b):
-        #   // Statistical test whether two one-dimensional sets of points are compatible
-        #   // with coming from the same parent distribution, using the Kolmogorov test.
-        #   // That is, it is used to compare two experimental distributions of unbinned data.
-        #   //
-        #   // Input:
-        #   // a,b: One-dimensional arrays of length na, nb, respectively.
-        #   //      The elements of a and b must be given in ascending order.
-        #   //
-        #   // Output:
-        #   // The returned value prob is a calculated confidence level which gives a
-        #   // statistical test for compatibility of a and b.
-        #   // Values of prob close to zero are taken as indicating a small probability
-        #   // of compatibility. For two point sets drawn randomly from the same parent
-        #   // distribution, the value of prob should be uniformly distributed between
-        #   // zero and one.
-        #   //  in case of error the function return -1
-        #   //  If the 2 sets have a different number of points, the minimum of
-        #   //  the two sets is used.
-        #   //
-        #   // Method:
-        #   // The Kolmogorov test is used. The test statistic is the maximum deviation
-        #   // between the two integrated distribution functions, multiplied by the
-        #   // normalizing factor (rdmax*sqrt(na*nb/(na+nb))).
-        #   //
         prob = -1
 
         if not a or not b:
