@@ -5,8 +5,6 @@ import numpy as np
 import random
 
 def encoder(seq_length,numberOfbuffers):
-#blockLength=int(input("Enter the block length"))
-#numberOfbuffers=int(input("Enter the number of buffers"))
     size=blockLength*8
     alpha=0.02
     counter=0
@@ -16,9 +14,7 @@ def encoder(seq_length,numberOfbuffers):
     #KStest
 
     def nint(x):
-        #   // Round to nearest integer. Rounds half integers to the nearest even integer
-        #   // CODE WRITTEN BY DONGEUN LEE ON OCT. 7, 2015
-        if x >= 0:
+            if x >= 0:
             i = int(x + 0.5)
             if (i & 1) and (x + 0.5) == i:
                 i-=1
@@ -29,14 +25,7 @@ def encoder(seq_length,numberOfbuffers):
         return i;
 
     def KolmogorovProb(z):
-        #   // CODE WRITTEN BY DONGEUN LEE ON OCT. 7, 2015
-        #   // Calculates the Kolmogorov distribution function,
-        #   // which gives the probability that Kolmogorov's test statistic will exceed
-        #   // the value z assuming the null hypothesis.
-        #   //
-        #   // NOTE: To compare two experimental distributions with m and n events,
-        #   //       use z = sqrt(m*n/(m+n))*dn
-
+        
         fj = [-2,-8,-18,-32]
         r=[None]*4
         w = 2.50662827
@@ -65,7 +54,6 @@ def encoder(seq_length,numberOfbuffers):
         return p
 
     def KolmogorovTest(na, a, nb, b):
-        #   //CODE WRITTEN BY DONGEUN LEE ON OCT. 7, 2015
         #   // Statistical test whether two one-dimensional sets of points are compatible
         #   // with coming from the same parent distribution, using the Kolmogorov test.
         #   // That is, it is used to compare two experimental distributions of unbinned data.
