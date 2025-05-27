@@ -1,7 +1,7 @@
 # after receiving statistical information results
 # run the following code for informer output
 
-!python -u "../main_informer.py" --model informer --features S --attn prob --do_predict
+python -u "../main_informer.py" --model informer --features S --attn prob --do_predict
 
 # post processing steps
 
