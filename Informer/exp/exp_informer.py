@@ -255,7 +255,7 @@ class Exp_Informer(Exp_Basic):
         preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
         preds1= preds.reshape(-1,1)
         
-        np.savetxt(r"../results/L1MAG_part2_preds.csv",preds1)
+        np.savetxt(r"./results/L1MAG_part2_preds.csv",preds1)
         
         return 
 
