@@ -31,6 +31,7 @@ plications, environmental monitoring, and traffic monitoring. As such, synthesiz
                      Figure 1: Our proposed methodology that enables Zero-shot forecasting 
 
 ## Models
+
 The research methodology was applied to various models and their results are shown in the paper. The requirements to reproduce the results varies from model to model. Currently Informer code with its requirements is present within this github. The following links provide code to the other models:
 
 - TimeGAN: https://github.com/jsyoon0823/TimeGAN
@@ -41,3 +42,9 @@ The research methodology was applied to various models and their results are sho
 
 ## Data
 
+For extrapolation experiments the dataset was divided into two equal halves where the first half was used for training and second half statistical information was used in the inference phase. For current experiments datasets of length 3768*2 are chosen, where each half is 3768 long. Some of the datasets are provided within the Data folder of the code. 
+In case of zero-shot experiments, ETTh1 dataset's first half was used as generic dataset to train the models.
+
+### Statistical Information
+
+As mentioned in the paper statistical information derived from datasets of interest are introduced into inference phase. For reproducing the results of the paper, the methodology used to extract statistical information from the second halves of the datasets are given in statistical_information folder. 
