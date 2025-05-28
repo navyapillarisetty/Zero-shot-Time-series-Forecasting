@@ -113,8 +113,8 @@ def encoder(seq_length,numberOfbuffers):
     cnt= 0
     exchan=[]
 
-    with open(r"..\L1MAG_part2.csv.bin", "rb") as binary_file: #reading file
-        with open(r"..\L1MAG_part2_encoded.csv.bin.idealem", "wb",buffering = 1000000) as idealem_file: #output to file
+    with open(r"..\Data\L1MAG_part2.csv.bin", "rb") as binary_file: #reading file
+        with open(r".\stat_info_results\IDEALEM_encoder_out\L1MAG_part2_encoded.csv.bin.idealem", "wb",buffering = 1000000) as idealem_file: #output to file
 
 
             while True:
@@ -189,8 +189,8 @@ def decoder(seq_length,numberOfbuffers):
 
 
 
-    with open(r"..\L1MAG_part2_encoded.csv.bin.idealem", "rb") as binary_file: # read compressed file
-        with open(r"..\L1MAG_part2_decoded.csv.bin.idealem.bin", "wb") as idealem_file: # write decompressed data
+    with open(r".\stat_info_results\IDEALEM_encoder_out\L1MAG_part2_encoded.csv.bin.idealem", "rb") as binary_file: # read compressed file
+        with open(r".\stat_info_results\IDEALEM_decoder_out\L1MAG_part2_decoded.csv.bin.idealem.bin", "wb") as idealem_file: # write decompressed data
             # converting binary index to decimal
             data=struct.unpack('B', binary_file.read(1))
             #for q, data in enumerate(data, start=1):
