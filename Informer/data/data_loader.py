@@ -152,7 +152,7 @@ class Dataset_Pred_part2(Dataset):
 
     def __read_data__(self):
         self.scaler = StandardScaler()
-        root_path1= r'./zero_shot_forecasting/statistical_information/stat_info_results//'
+        root_path1= r'./statistical_information/stat_info_results//'
         file_path= os.path.join(root_path1,
                                           self.data_path)
         if file_path.endswith(".csv"):
