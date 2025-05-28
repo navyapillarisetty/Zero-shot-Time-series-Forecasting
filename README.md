@@ -30,5 +30,14 @@ plications, environmental monitoring, and traffic monitoring. As such, synthesiz
                      
                      Figure 1: Our proposed methodology that enables Zero-shot forecasting 
 
-## Data 
+## Models
+The research methodology was applied to various models and their results are shown in the paper. The requirements to reproduce the results varies from model to model. Currently Informer code with its requirements is present within this github. The following links provide code to the other models:
+
+- TimeGAN: https://github.com/jsyoon0823/TimeGAN
+- DoppelGANger: https://github.com/fjxmlzn/DoppelGANger
+- Informer: https://github.com/zhouhaoyi/Informer2020
+- LLMTime: https://github.com/ngruver/llmtime
+- Diffusion-TS: https://github.com/Y-debug-sys/Diffusion-TS
+
+## Data
 
