@@ -1,7 +1,7 @@
 # after receiving statistical information results
 # run the following code for informer output
 
-python -u "../main_informer.py" --model informer --features S --attn prob --do_predict
+python -u "./Informer/main_informer.py" --model informer --features S --attn prob --do_predict
 
 # post processing steps
 
@@ -26,7 +26,7 @@ from sklearn.metrics import mean_absolute_error
 
 
 # the statistical information data path
-data_path= "../L1MAG_part2_decoded.csv.bin.idealem.bin"
+data_path= "./statistical_information/summary_stat_out/L1MAG_part2_summary_statistics.csv"
 
 if data_path.endswith(".csv"):
     hint= np.loadtxt(data_path)
@@ -85,7 +85,7 @@ for i in range(0,length,seq_length):
     fake.append(dat2)
 print(len(fake))
 
-original= np.fromfile("../L1MAG_part2.csv.bin", dtype= np.float64)
+original= np.fromfile("./Data/L1MAG_part2.csv.bin", dtype= np.float64)
 original= original[seq_length*4:]
 original= np.array(original)
 original1= original.reshape((len(original)//seq_length),seq_length,1)
