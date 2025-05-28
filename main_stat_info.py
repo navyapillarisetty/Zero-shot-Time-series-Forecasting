@@ -4,7 +4,7 @@ from statistical_information.summary_stat import sum_stat,random_data
 
 seq_length= 24
 
-original= np.fromfile("../L1MAG_part2.csv.bin", dtype= np.float64)
+original= np.fromfile("./Data/L1MAG_part2.csv.bin", dtype= np.float64)
 
 # if statistical information from IDEALEM is to be used 
 numberOfbuffers= 255
