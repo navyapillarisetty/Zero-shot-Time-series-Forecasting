@@ -14,7 +14,7 @@ original= np.fromfile("/content/drive/My Drive/zero_shot_forecasting/Data/L1MAG_
 # for summary statistics statistical information
 ran_data= random_data(original,seq_length)
 print(ran_data)
-np.savetxt(r"/content/drive/My Drive/zero_shot_forecasting/statistical_information/stat_info_results/L1MAG_part2_summary_statistics.csv",ran_data)
+np.savetxt(r"./statistical_information/stat_info_results/L1MAG_part2_summary_statistics.csv",ran_data)
 
 # in case of LLMTime use this for summary statistics experiemnts
 #mean, std= sum_stat(original,seq_length) # comment out this line
