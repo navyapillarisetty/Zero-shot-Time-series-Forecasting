@@ -49,6 +49,15 @@ In case of zero-shot experiments, ETTh1 dataset's first half was used as generic
 
 As mentioned in the paper statistical information derived from datasets of interest are introduced into inference phase. For reproducing the results of the paper, the methodology used to extract statistical information from the second halves of the datasets are given in statistical_information folder. 
 The code to derive statistical information is provided in main_stat_info.py file. 
-The directories of the data, statistical information and output results are to be adjusted in the informer model - like in data_loader.py file training phase either first half of dataset or ETTh1 first half must be given where as in exp_informer.py file directory to store model's output result.
 
+python -u "./main_stat_info.py"
 
+This code provides statistical information of the dataset chosen. Currently within the given files IDEALEM.py or summary_stat.py the dataset chosen is L1MAG_part2 but it can be changed in those files.
+
+## Main code reproducibility
+
+After receiving statistical information to run the informer model as well as to perform post processing methodology following code is used:
+
+python -u "./main.py"
+
+Currently the example code given is for L1MAG_part2 reconstruction through extrapolation. By changing the dataset directories in data_loader.py in informer model as well as directories in the main.py file this experiement can be extended to other datasets as well. 
