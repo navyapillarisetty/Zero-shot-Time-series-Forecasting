@@ -14,10 +14,10 @@ def encoder(seq_length,numberOfbuffers):
     #KStest
 
     def nint(x):
-            if x >= 0:
+        if x >= 0:
             i = int(x + 0.5)
-            if (i & 1) and (x + 0.5) == i:
-                i-=1
+        if (i & 1) and (x + 0.5) == i:
+            i-=1
         else:
             i = int(x - 0.5)
             if (i & 1) and (x - 0.5) == i:
