@@ -21,7 +21,7 @@ import subprocess
 
 subprocess.run([
     "python",
-    "/content/drive/My Drive/zero_shot_forecasting/Informer/main_informer.py",
+    "./Informer/main_informer.py",
     "--model", "informer",
     "--data", "Part2",
     "--features", "S",
@@ -42,7 +42,7 @@ from sklearn.metrics import mean_absolute_error
 
 # the statistical information data path
 #data_path= "../L1MAG_part2_decoded.csv.bin.idealem.bin"
-data_path= "/content/drive/My Drive/zero_shot_forecasting/statistical_information/stat_info_results/L1MAG_part2_summary_statistics.csv"
+data_path= "./statistical_information/stat_info_results/L1MAG_part2_summary_statistics.csv"
 
 if data_path.endswith(".csv"):
     hint= np.loadtxt(data_path)
@@ -53,7 +53,7 @@ else:
 
 hint1= pd.DataFrame(hint)
 
-prediction= np.loadtxt("/content/drive/My Drive/zero_shot_forecasting/results/L1MAG_part2_preds.csv")
+prediction= np.loadtxt("./results/L1MAG_part2_preds.csv")
 
 class StandardScaler():
     def __init__(self):
@@ -101,7 +101,7 @@ for i in range(0,length,seq_length):
     fake.append(dat2)
 print(len(fake))
 
-original= np.fromfile("/content/drive/My Drive/zero_shot_forecasting/Data/L1MAG_part2.csv.bin", dtype= np.float64)
+original= np.fromfile("./Data/L1MAG_part2.csv.bin", dtype= np.float64)
 original= original[seq_length*4:]
 original= np.array(original)
 original1= original.reshape((len(original)//seq_length),seq_length,1)
