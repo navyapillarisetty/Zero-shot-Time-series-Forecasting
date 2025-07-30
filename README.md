@@ -5,8 +5,7 @@
 
 *Abstract*
 
- Time-series data stem from many sources such as financial applications, medical ap
-plications, environmental monitoring, and traffic monitoring. As such, synthesizing
+ Time-series data stem from many sources such as financial applications, medical applications, environmental monitoring, and traffic monitoring. As such, synthesizing
  time series with generative models or predicting future time series with predictive
  models has received much attention in recent years, since they can create more data
  of similar nature or forecast data of near future, based on the set of time series they
