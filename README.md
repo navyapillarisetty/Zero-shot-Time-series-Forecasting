@@ -23,6 +23,7 @@
  allows to train a generator/predictor only once with a generic time series and use
  the same generator/predictor for all other datasets, when their statistical summaries
  are available.
+ 
 <img width="2000" height="500" alt="Figure 2 image" src="https://github.com/user-attachments/assets/ae8b0458-480d-4a1a-a7dc-2de805cd1e6d" />
                      Figure 1: Our proposed methodology that enables Zero-shot forecasting 
 
