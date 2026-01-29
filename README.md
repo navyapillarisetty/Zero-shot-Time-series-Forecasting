@@ -37,6 +37,7 @@ The research methodology was applied to various models and their results are sho
 - Informer: https://github.com/zhouhaoyi/Informer2020
 - LLMTime: https://github.com/ngruver/llmtime
 - Diffusion-TS: https://github.com/Y-debug-sys/Diffusion-TS
+- TTM: https://github.com/ibm-granite/granite-tsfm/tree/main/tsfm_public/models/tinytimemixer
 
 ## Data
 
