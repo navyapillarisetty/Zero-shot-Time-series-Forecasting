@@ -18,16 +18,16 @@ for j in exchan:
 
 import subprocess
 
-
-subprocess.run([
-    "python",
-    "./Informer/main_informer.py",
-    "--model", "informer",
-    "--data", "Part2",
-    "--features", "S",
-    "--attn", "prob",
-    "--do_predict"
-])
+# Only in case of Informer, comment out the following code
+# subprocess.run([
+#     "python",
+#     "./Informer/main_informer.py",
+#     "--model", "informer",
+#     "--data", "Part2",
+#     "--features", "S",
+#     "--attn", "prob",
+#     "--do_predict"
+# ])
 
 
 # post processing steps
