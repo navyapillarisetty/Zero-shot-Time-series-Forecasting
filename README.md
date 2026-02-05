@@ -60,4 +60,5 @@ After receiving statistical information to run the informer model as well as to 
 python -u "./main.py"
 
 Currently the example code given is for L1MAG_part2 reconstruction through extrapolation. By changing the dataset directories in data_loader.py in informer model as well as directories in the main.py file this experiement can be extended to other datasets as well. 
+
 To run the TTM model please run the .ipynb file loaded at the TTM folder and then run the main.py file commenting out the informer subprocess. 
