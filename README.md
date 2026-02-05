@@ -30,7 +30,7 @@
 
 ## Models
 
-The research methodology was applied to various models and their results are shown in the paper. The requirements to reproduce the results varies from model to model. Currently Informer code with its requirements is present within this github. The following links provide code to the other models:
+The research methodology was applied to various models and their results are shown in the paper. The requirements to reproduce the results varies from model to model. Currently Informer and TTM models codes with their requirements are presented within this github. The following links provide code to the other models:
 
 - TimeGAN: https://github.com/jsyoon0823/TimeGAN
 - DoppelGANger: https://github.com/fjxmlzn/DoppelGANger
@@ -60,3 +60,4 @@ After receiving statistical information to run the informer model as well as to 
 python -u "./main.py"
 
 Currently the example code given is for L1MAG_part2 reconstruction through extrapolation. By changing the dataset directories in data_loader.py in informer model as well as directories in the main.py file this experiement can be extended to other datasets as well. 
+To run the TTM model please run the .ipynb file loaded at the TTM folder and then run the main.py file commenting out the informer subprocess. 
