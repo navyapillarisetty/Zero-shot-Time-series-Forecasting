@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 
 class Dataset_train(Dataset):
     def __init__(self, root_path, flag='train', size=None, 
-                 features='S', data_path='L1MAG.csv.bin', 
+                 features='S', train_data_path='L1MAG_train.csv', 
                  target='Data', scale=True, inverse=False, timeenc=0, freq='h', cols=None):
         # size [seq_len, label_len, pred_len]
         # info
@@ -41,21 +41,21 @@ class Dataset_train(Dataset):
         self.freq = freq
         self.cols=cols
         self.root_path = root_path
-        self.data_path = data_path
+        self.train_data_path = train_data_path
         self.__read_data__()
 
     def __read_data__(self):
         self.scaler = StandardScaler()
-        file_path= os.path.join(self.root_path,
-                                          self.data_path)
-        if file_path.endswith(".csv"):
-            new_data= np.loadtxt(file_path)
-        elif file_path.endswith(".bin"):
-            new_data= np.fromfile(file_path)
+        if self.train_data_path.endswith(".csv"):
+            new_data= np.loadtxt(self.root_path+self.train_data_path)
+        elif self.train_data_path.endswith(".bin"):
+            new_data= np.fromfile(self.root_path+self.train_data_path)
         else:
-            new_data= pd.read_csv(file_path,header=0)
+            new_data= pd.read_csv(self.root_path+self.train_data_path,header=0)
         date_new= pd.date_range(start=pd.to_datetime("2018-07-01"), periods=len(new_data), freq="H")
         df_raw= pd.DataFrame({"date":date_new,"Data":new_data})
+        #print(df_raw)
+        #print("lenth of data",df_raw.shape)
         
         '''
         df_raw.columns: ['date', ...(other features), target feature]
@@ -123,7 +123,7 @@ class Dataset_train(Dataset):
 
 class Dataset_Pred_part2(Dataset):
     def __init__(self, root_path, flag='pred', size=None, 
-                 features='S', data_path= 'L1MAG_part2_summary_statistics.csv',              
+                 features='S', test_data_path= 'L1MAG_test.csv',              
                  target='Data', scale=True, inverse=False, timeenc=0, freq='H', cols=None):
         # size [seq_len, label_len, pred_len]
         # info
@@ -147,23 +147,24 @@ class Dataset_Pred_part2(Dataset):
         self.freq = freq
         self.cols=cols
         self.root_path = root_path
-        self.data_path = data_path
+        self.test_data_path = test_data_path
         self.__read_data__()
 
     def __read_data__(self):
         self.scaler = StandardScaler()
-        root_path1= r'./statistical_information/stat_info_results//'
-        file_path= os.path.join(root_path1,
-                                          self.data_path)
-        if file_path.endswith(".csv"):
-            new_data= np.loadtxt(file_path)
-        elif file_path.endswith(".bin"):
-            new_data= np.fromfile(file_path)
+        if self.test_data_path.endswith(".csv"):
+            new_data= np.loadtxt(self.root_path+self.test_data_path)
+        elif self.test_data_path.endswith(".bin"):
+            new_data= np.fromfile(self.root_path+self.test_data_path)
         else:
-            new_data= pd.read_csv(file_path,header=0)
-
+            new_data= pd.read_csv(self.root_path+self.test_data_path,header=0)
+        #new_data=testing_data_path
+        #new_data= new_data.flatten()
         date_new= pd.date_range(start=pd.to_datetime("2018-07-01"), periods=len(new_data), freq="H")
+
         df_raw= pd.DataFrame({"date":date_new,"Data":new_data})
+        #print(df_raw)
+        #print("lenth of data",df_raw.shape)
         '''
         df_raw.columns: ['date', ...(other features), target feature]
         '''
@@ -216,6 +217,7 @@ class Dataset_Pred_part2(Dataset):
             seq_y = self.data_x[r_begin:r_begin+self.label_len]
         else:
             seq_y = self.data_y[r_begin:r_begin+self.label_len]
+
         seq_x_mark = self.data_stamp[s_begin:s_end]
         seq_y_mark = self.data_stamp[r_begin:r_end]
 
